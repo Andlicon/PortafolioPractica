@@ -6,6 +6,11 @@ section {
     justify-content: center;
 }
 
+.section-description {
+    font-size: 1.2rem;   
+    color: #584e4e;
+}
+
 h2 {
     font-size: 1.5rem;
 }
@@ -28,6 +33,20 @@ h2 {
 
 .section-p {
     font-size: 1.2rem;
+}
+
+.dark-text {
+    color: black;
+}
+
+.light-text {
+    color: white;
+}
+
+.btn-info {
+    font-size: 1.1rem;
+    margin: 20px;
+    font-weight: bold;
 }
 
 /*Barra de navegacion*/
@@ -125,6 +144,67 @@ h2 {
     margin: 5px;
 }
 
+/* proyectos */
+.proyectos-recientes {
+    padding: 40px;
+}
+
+.proyectos-recientes img {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    display: block;
+    transition: all 0.2 ease;
+}
+
+.proyectos-contenedor {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.overlay {
+    transition: all 0.2s ease;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.proyecto {
+    position: relative;
+}
+
+.proyecto:hover .overlay {
+    opacity: 1;
+}
+
+.proyecto:hover img {
+    opacity: 0.2;
+}
+
+.overlay .iconos-contenedor {
+    display: flex;
+}
+
+.overlay i {
+    color: black;
+    font-size: 60px;
+    margin: 10px;
+}
+
 /*Responsivo*/
 @media screen and (max-width: 767px) {
     .navbar-brand {
@@ -137,3 +217,13 @@ h2 {
         max-width: 600px;
     }
 }
+
+ @media screen and (max-width: 400px) {
+    .overlay p {
+        font-size: 18px;
+    }
+
+    .overlay i {
+        font-size: 40px;
+    }
+ }
